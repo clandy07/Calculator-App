@@ -1,4 +1,4 @@
-﻿using Microsoft.Maui.Controls;
+using Microsoft.Maui.Controls;
 
 namespace Calculator
 {
@@ -98,6 +98,24 @@ namespace Calculator
                 currentNumber = result.ToString();
                 resultText.Text = currentNumber;
             }
+        }
+        
+        private void Button_Pressed(object sender, EventArgs e)
+        {
+            Button button = (Button)sender;
+            button.BackgroundColor = Colors.DimGray;
+        }
+
+        private void Button_Released1(object sender, EventArgs e)
+        {
+            Button btn = (Button)sender;
+            btn.BackgroundColor = Colors.Gray;
+        }
+        
+        private void Button_Released2(object sender, EventArgs e)
+        {
+            Button btn = (Button)sender;
+            btn.BackgroundColor = Colors.Orange;
         }
     }
 }
